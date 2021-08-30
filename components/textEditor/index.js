@@ -18,14 +18,14 @@ const TextEditor = () => {
       children: [{ text: 'A line of text in a paragraph.' }],
     },
   ]);
-  const handleKeyDownAnd = (event) => {
-    if (event.key === '&') {
-      // Prevent the ampersand character from being inserted.
-      event.preventDefault();
-      // Execute the `insertText` method when the event occurs.
-      editor.insertText('and');
-    }
-  };
+  // const handleKeyDownAnd = (event) => {
+  //   if (event.key === '&') {
+  //     // Prevent the ampersand character from being inserted.
+  //     event.preventDefault();
+  //     // Execute the `insertText` method when the event occurs.
+  //     editor.insertText('and');
+  //   }
+  // };
   const handleKeyDown = (event) => {
     if (!event.ctrlKey) {
       return;
