@@ -1,6 +1,6 @@
 const CodeElement = ({ attributes, children }) => {
   return (
-    <pre {...attributes} className="text-gray-600">
+    <pre {...attributes} className="text-main-black font-paragraph">
       <code>{children}</code>
     </pre>
   );

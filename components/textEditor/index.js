@@ -77,20 +77,35 @@ const TextEditor = () => {
   }, []);
   return (
     <div className="">
-      <Slate
-        editor={editor}
-        value={value}
-        onChange={(newValue) => setValue(newValue)}
-      >
-        <Editable
-          autoCapitalize="false"
-          autoCorrect="false"
-          spellCheck="false"
-          renderElement={renderElement}
-          renderLeaf={renderLeaf}
-          onKeyDown={handleKeyDown}
-        />
-      </Slate>
+      <p className="font-paragraph text-red-600">Instruction :</p>
+      <ul className="list-disc ml-4 mb-4">
+        <li>
+          <p className="font-paragraph text-main-black text-sm">
+            Press Ctrl + ` for toggling to code block
+          </p>
+        </li>
+        <li>
+          <p className="font-paragraph text-main-black text-sm">
+            Press Ctrl + B for toggling to bold
+          </p>
+        </li>
+      </ul>
+      <div className="border rounded-xl p-3 border-gray-600 min-h-[7.5rem]">
+        <Slate
+          editor={editor}
+          value={value}
+          onChange={(newValue) => setValue(newValue)}
+        >
+          <Editable
+            autoCapitalize="false"
+            autoCorrect="false"
+            spellCheck="false"
+            renderElement={renderElement}
+            renderLeaf={renderLeaf}
+            onKeyDown={handleKeyDown}
+          />
+        </Slate>
+      </div>
     </div>
   );
 };
