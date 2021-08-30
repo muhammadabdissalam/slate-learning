@@ -5,6 +5,7 @@ import { Slate, Editable, withReact } from 'slate-react';
 import DefaultElement from './renderer/defaultElement';
 import CodeElement from './renderer/codeElement';
 import Leaf from './leaf/leaf';
+
 const TextEditor = () => {
   const editorRef = useRef();
   if (!editorRef.current) {
